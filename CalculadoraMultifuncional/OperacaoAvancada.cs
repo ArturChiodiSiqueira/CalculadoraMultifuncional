@@ -104,7 +104,7 @@ namespace CalculadoraMultifuncional
                 soma += numero;
             }
             media = soma / quantidadeNumeros;
-            Console.WriteLine("\n A MÉDIA DOS NUMEROS É = " + media);
+            Console.WriteLine("\n A MÉDIA DOS NUMEROS É = " + media.ToString("F3"));
 
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();

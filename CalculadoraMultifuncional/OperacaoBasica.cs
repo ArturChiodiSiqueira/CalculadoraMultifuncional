@@ -68,10 +68,17 @@ namespace CalculadoraMultifuncional
             Numero1 = double.Parse(Console.ReadLine());
             Numero2 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nO PROGRAMA IRÁ REALIZAR A DIVISÃO: " + Numero1 + " / " + Numero2);
-            Dividir = Numero1 / Numero2;
+            if (Numero2 == 0.0)
+            {
+                Console.WriteLine("\nNÃO É POSSÍVEL DIVIDIR POR ZERO!!");
+            }
+            else
+            {
+                Console.WriteLine("\nO PROGRAMA IRÁ REALIZAR A DIVISÃO: " + Numero1 + " / " + Numero2);
+                Dividir = Numero1 / Numero2;
 
-            Console.WriteLine("\nO RESULTADO DA DIVISÃO (" + Numero1 + " / " + Numero2 + ") É: " + Dividir);
+                Console.WriteLine("\nO RESULTADO DA DIVISÃO (" + Numero1 + " / " + Numero2 + ") É: " + Dividir.ToString("F3"));
+            }
 
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
@@ -85,7 +92,7 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\no programa irá realizar a radiciação de: " + Numero1);
             Radiciar = Math.Sqrt(Numero1);
 
-            Console.WriteLine("\nA RAIZ DE " + Numero1 + " É: " + Radiciar);
+            Console.WriteLine("\nA RAIZ DE " + Numero1 + " É: " + Radiciar.ToString("F3"));
 
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
@@ -100,7 +107,7 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\no programa irá realizar a potenciação: " + Numero1 + " elevado a " + Numero2);
             Potenciar = Math.Pow(Numero1, Numero2);
 
-            Console.WriteLine("\nO RESULTADO DA POTENCIAÇÃO (" + Numero1 + " elevdo a " + Numero2 + ") É: " + Potenciar);
+            Console.WriteLine("\nO RESULTADO DA POTENCIAÇÃO (" + Numero1 + " elevdo a " + Numero2 + ") É: " + Potenciar.ToString("F3"));
 
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
