@@ -13,7 +13,7 @@ namespace CalculadoraMultifuncional
         {
             int opcao;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("          ESTA É UMA CALCULADORA MULTIFUNCIONAL!\n");
+            Console.WriteLine("          ESTA É UMA CALCULADORA MULTIFUNCIONAL!!\n");
             Console.WriteLine("       DENTRE AS OPÇÕES NO MENU, QUAL DESEJA EXECUTAR?");
             Console.ForegroundColor = ConsoleColor.White;
 
