@@ -6,6 +6,8 @@ namespace CalculadoraMultifuncional
     {
         static void Main(string[] args)
         {
+            Console.Title = "### CALCULADORA ###";
+
             MenuPrincipal();
         }
 
