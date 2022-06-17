@@ -8,7 +8,7 @@ namespace CalculadoraMultifuncional
 {
     internal class CalculadoraAreas
     {
-        /// circulo
+        #region círculo
         public void CalcularCirculo()
         {
             double areaCirculo, raio;
@@ -54,8 +54,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
-        /// triangulo
+        #region triangulo
         public void CalcularTriangulo()
         {
             double ladoA, ladoB, ladoC;
@@ -116,8 +117,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
-        /// quadrado
+        #region quadrado
         public void CalcularQuadrado()
         {
             double lado1, lado2, areaQuadrado;
@@ -172,5 +174,6 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
     }
 }

@@ -8,6 +8,7 @@ namespace CalculadoraMultifuncional
 {
     internal class OperacaoAvancada
     {
+        #region equação de segundo grau
         public void EquacaoSegundoGrau()
         {
             double a, b, c, delta, x1, x2;
@@ -40,7 +41,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region fatorial
         public void CalcularFatorial()
         {
             int numero;
@@ -66,7 +69,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
-        
+        #endregion
+
+        #region fibonacci
         public void SequenciaFibonacci()
         {
             int parada, numeroAnterior;
@@ -87,7 +92,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region media
         public void CalcularMedia()
         {
             int quantidadeNumeros;
@@ -109,5 +116,6 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
     }
 }

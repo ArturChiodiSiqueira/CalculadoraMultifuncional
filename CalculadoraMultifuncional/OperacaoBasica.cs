@@ -17,6 +17,7 @@ namespace CalculadoraMultifuncional
         public double Radiciar { get; set; }
         public double Potenciar { get; set; }
 
+        #region adição
         public void SomarValores()
         {
             Console.WriteLine("\ninforme abaixo os números que deseja somar:");
@@ -31,7 +32,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region subtração
         public void SubtrairValores()
         {
             Console.WriteLine("\ninforme abaixo os números que deseja subtrair:");
@@ -46,7 +49,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region multiplicação
         public void MutiplicarValores()
         {
             Console.WriteLine("\ninforme abaixo os números que deseja multiplicar:");
@@ -61,7 +66,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region divisão
         public void DividirValores()
         {
             Console.WriteLine("\ninforme abaixo os números que deseja dividir:");
@@ -83,7 +90,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region radiciação
         public void RadiciarValor()
         {
             Console.WriteLine("\ninforme abaixo o número que deseja extrair a raiz quadrada:");
@@ -97,7 +106,9 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion
 
+        #region petenciação
         public void PotenciarValores()
         {
             Console.WriteLine("\ninforme abaixo o numero que deseja elevar e o expoente:");
@@ -112,5 +123,6 @@ namespace CalculadoraMultifuncional
             Console.WriteLine("\n\n pressione qualquer tecla para retornar ao menu");
             Console.ReadKey();
         }
+        #endregion'
     }
 }
