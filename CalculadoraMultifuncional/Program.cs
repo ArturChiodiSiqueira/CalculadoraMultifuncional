@@ -20,20 +20,21 @@ namespace CalculadoraMultifuncional
 
             do
             {
-                Console.WriteLine("\t|°°°°°°°°°°°°° MENU PRINCIPAL °°°°°°°°°°°°°|");
-                Console.WriteLine("\t|  opção 0 : sair                          |");
-                Console.WriteLine("\t|                                          |");
-                Console.WriteLine("\t|  opção 1 : acessar calculadora básica    |");
-                Console.WriteLine("\t|  opção 2 : acessar calculadora avançada  |");
-                Console.WriteLine("\t|  opção 3 : acessar calculadora de áreas  |");
-                Console.WriteLine("\t|__________________________________________|");
+                Console.WriteLine("\t|°°°°°°°°°°°°°°° MENU PRINCIPAL °°°°°°°°°°°°°°°|");
+                Console.WriteLine("\t|  opção 0 : sair                              |");
+                Console.WriteLine("\t|                                              |");
+                Console.WriteLine("\t|  opção 1 : acessar calculadora básica        |");
+                Console.WriteLine("\t|  opção 2 : acessar calculadora avançada      |");
+                Console.WriteLine("\t|  opção 3 : acessar calculadora de áreas      |");
+                Console.WriteLine("\t|  opção 4 : acessar conversor de temperatura  |");
+                Console.WriteLine("\t|______________________________________________|");
 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("\n\tinforme a opção desejada no MENU: ");
                 Console.ForegroundColor = ConsoleColor.White;
                 opcao = int.Parse(Console.ReadLine());
 
-                if (opcao < 0 || opcao > 3)
+                if (opcao < 0 || opcao > 4)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("\n\tOPÇÃO INVALIDA! Para voltar ao menu, pressione QUALQUER TECLA!");
@@ -66,6 +67,11 @@ namespace CalculadoraMultifuncional
                         case 3:
                             Console.Clear();
                             MenuCalculadoraAreas();
+                            break;
+
+                        case 4:
+                            Console.Clear();
+                            MenuConversor();
                             break;
                     }
                 }
@@ -336,6 +342,66 @@ namespace CalculadoraMultifuncional
                             break;
 
                         case 7:
+                            Console.Clear();
+                            MenuPrincipal();
+                            break;
+                    }
+                }
+                return opcao;
+            } while (opcao != 0);
+        }
+
+        public static int MenuConversor()
+        {
+            int opcao;
+            ConversaoTemperaturas selecao = new ConversaoTemperaturas();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("   DENTRE AS OPÇÕES NO MENU, QUAL DESEJA EXECUTAR?");
+            Console.ForegroundColor = ConsoleColor.White;
+
+            do
+            {
+                Console.WriteLine("\t|°°°°°°°°°°°°°°° MENU °°°°°°°°°°°°°°°|");
+                Console.WriteLine("\t|  opção 0 : sair                    |");
+                Console.WriteLine("\t|                                    |");
+                Console.WriteLine("\t|  opção 1 : converter temperaturas  |");
+                Console.WriteLine("\t|                                    |");
+                Console.WriteLine("\t|  opção 2 : MENU PRINCIPAL          |");
+                Console.WriteLine("\t|____________________________________|");
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("\n\tinforme a opção desejada no MENU: ");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                opcao = int.Parse(Console.ReadLine());
+
+                if (opcao < 0 || opcao > 7)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\n\tOPÇÃO INVALIDA! Para voltar ao menu, pressione QUALQUER TECLA!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadKey();
+                    Console.Clear();
+                    MenuConversor();
+                }
+                else
+                {
+                    switch (opcao)
+                    {
+                        case 0:
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\nvocê escolheu sair.");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            opcao = 0;
+                            break;
+
+                        case 1:
+                            selecao.ConverterTemperatura();
+                            Console.Clear();
+                            MenuConversor();
+                            break;
+
+                        case 2:
                             Console.Clear();
                             MenuPrincipal();
                             break;
